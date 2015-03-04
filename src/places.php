@@ -2,10 +2,12 @@
     class Place
     {
         private $city_name;
+        private $time_visited;
 
-        function __construct ($city_name)
+        function __construct ($city_name, $time_visited)
         {
             $this->city_name = $city_name;
+            $this->time_visited = $time_visited;
         }
         function setCityName($city1)
         {
@@ -14,6 +16,14 @@
         function getCityName()
         {
             return $this->city_name;
+        }
+        function setTimeVisited($time1)
+        {
+            $this->time_visited = (string) $time1;
+        }
+        function getTimeVisited()
+        {
+            return $this->time_visited;
         }
         function save()
         {
